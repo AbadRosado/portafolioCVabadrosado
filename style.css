@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*selector de TIPO (etiqueta): afectar a todo el cuerpo de la pagina*/
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+     background-image: url(imagenes/fondo-pagina2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+
+
+}
+
+/*selector de TIPO aplicar estilo al encabezado*/
+header{
+    background: #333;
+    color: #e64616;
+    padding: 20px;
+    text-align: center;
+}
+ 
+
+section{
+    /*background: #333; */
+    color: #161413;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+/*selector descendiente*/
+nav ul{
+    list-style: none;
+}
+/*selector de tipo para los elementos li dentro del nav ul*/
+nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+/*selector de los enlaces (a) dentro del nav */
+ 
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+/*selector de CLASE selecciona cualquier elemento que tenga class="proyecto-card"*/
+.proyecto-card{
+    border: 1px solid #88ee99;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+/*selector de CLASE selecciona cualquier elemento que tenga class="informacion-personal"*/
+.informacion-personal{
+     border: 1px solid #0f0f0f;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+
+    /* border-radius: 50%; */
+}
+
+
+/*selector de id */
+.contenedor-proyetos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #836ba3;
+}
+
+/*selector de ID (#) seleccionar un elemento en especifico */
+#contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    /* background: #ebb67b;*/
+}
+ /* imagen circular
+
+.imag{
+width: 200px;
+height: 200px;
+border-radius: 50%;
+
+ }*/
+
+/*MEDIA QUERYS*/
+ 
+@media screen and (max-width: 600px) {
+    nav ul li{
+        display: block;
+        margin: 10px 0;
+    }
+    .proyecto-card{
+        width: 80%;
+    }
+}
+ 
+@media screen and (min-width:601px) and (max-width:900px){
+    #contenedor-proyectos{
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .proyecto-card{
+        width: 45%;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+}
+ 
+@media (prefers-color-scheme: dark){
+    body{
+        background: #121212;
+        color: #e0e0e0;
+    }
+    header{
+        background: #1f1f1f;
+    }
+    .proyecto-card{
+        background: #1e1e1e;
+        border: 1px solid #333;
+        color: #e0e0e0;
+    }
+    .proyecto-card a{
+        color: #cacbcc;
+    }
+}
+ 
